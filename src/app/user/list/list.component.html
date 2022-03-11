@@ -1,0 +1,12 @@
+<div  *ngFor="let user of users$ | async">
+  {{ user.email }}
+</div>
+
+ <!-- <div *ngIf="loading$ | async">
+ fetching users...
+ </div> -->
+
+<div *ngIf="error$ | async; let error" >
+ <div *ngIf="error">{{ error }}</div>
+</div>
+
