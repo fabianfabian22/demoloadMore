@@ -1,1 +1,5 @@
-<p>house works!</p>
+
+<div class="flex flex-wrap  ">
+<button (click)=" loadMoreData() "></button>
+<app-items-house *ngFor="let item of houses$['data'] "></app-items-house>
+</div>

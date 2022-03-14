@@ -3,7 +3,8 @@ export interface House{
   type: string;
   id: string;
   links: any;
-  attributes: Atributes []
+  attributes: Atributes[],
+  data: any[]
 }
 
 export interface Atributes {
