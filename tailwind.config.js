@@ -9,7 +9,14 @@ module.exports = {
   },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    container: {
+      center: true,
+    },
+    extend: {
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      }
+    },
   },
   variants: {
     extend: {},

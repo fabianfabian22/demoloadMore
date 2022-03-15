@@ -1,9 +1,11 @@
 
-<div class="container  justify-center  items-center text-center">
+<div class="w-full max-w-screen-xl mx-auto px-4">
 
 <div class="flex flex-wrap  mx-auto">
 <app-items-house *ngFor="let item of houses$"   [flat]="item"></app-items-house>
 </div>
-
-<button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded object-center" (click)=" loadMoreData() ">mostrar más</button>
+<div class=" flex p-2 max-w-full items-center justify-center ">
+<button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded object-center" (click)=" loadMoreData() ">
+    mostrar más</button>
+</div>
 </div>
