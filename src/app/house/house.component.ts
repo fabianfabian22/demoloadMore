@@ -19,13 +19,13 @@ export class HouseComponent implements OnInit {
     this.store.select(selectorHouse.getList).subscribe(
       response => {
         this.houses$ = response;
-        this.lengthHouse = this.houses$['data'];
+
       }
     );
   }
 
   loadMoreData() {
-  let lengthHouse = this.lengthHouse.length + 1;
+  let lengthHouse = this.houses$.length + 1;
   this.store.dispatch(actionsHouse.getMoreItems({lengthHouse}));
        }
 

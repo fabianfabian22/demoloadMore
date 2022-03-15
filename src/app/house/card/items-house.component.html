@@ -1,19 +1,16 @@
 
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg py-8 m-8  rounded-tl-md">
-  <img class="w-full" src="https://inmueble.s3.eu-west-1.amazonaws.com/fotos_inmuebles/5/1/9/4/5194167.jpg"
-  alt="Sunset in the mountains">
-  <div class="px-6 py-4">
-    <span class="font-bold text-xl mb-2 font-sans hover:font-serif">120000 € </span>
-    <span>Poblacion la senia calle</span>
+<div class="max-w-sm rounded   m-8  rounded-tl-md content-start bg-slate-300">
+
+  <img class="w-full  rounded " src="{{atributes['field_inmu_imag_arra'][0] }}"alt="Sunset in the mountains">
+
+  <div class=" flex px-2 py-4">
+    <span class="inline-block  border-8 border-slate-100 bg-orange-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-20">{{atributes['field_inmu_prec']}} </span>
+    <span>
+      <div class="iten">Piso en {{atributes['field_inmu_pobl'] | titlecase  }}</div>
+
+        <div class="">{{atributes['field_inmu_tipo_via'] }}</div>
+      </span>
     <div class="font-bold text-xl mb-2"></div>
-    <p class="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
+
 </div>

@@ -6,18 +6,13 @@ export const getHouseFeatureState = createFeatureSelector<HouseState>('houses');
 export const getList = createSelector(
   getHouseFeatureState,
   state => {
-   //console.log('state.list: ', state.list);
-    return state.list
-
-  }
+  return state.list }
 );
 
 export const selectAllItemsLength= createSelector(
   getHouseFeatureState,
   state => {
-     return state.list.length;
-
-  }
+     return state.list.length; }
 );
 
 export const  isLoading = createSelector(

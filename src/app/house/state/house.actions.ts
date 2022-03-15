@@ -9,17 +9,10 @@ export const getMoreItems = createAction(
   props<{ lengthHouse: number }>()
 );
 
-
-// export const loadeMoreHouse =  createAction( '[ HOUSE ]  Loaded More', props<{ page: number; limit: number }>()
-// );
-
-
-
 export const getItemsComplete = createAction(
   `[ HOUSE]  getItemsComplete`,
   props<{ houses: any[] }>()
 );
-
 
 export const houseFetchSuccessful =  createAction(
     '[ HOUSE ]  Loaded success House',
@@ -30,8 +23,6 @@ export const houseFetchMoreSuccessful =  createAction(
   '[ HOUSE ]  Loaded MORE  success House',
    props<{ list: House[ ] }>()
 );
-
-
 
 export const fetchError = createAction(
     '[ HOUSE ]  load error House ',

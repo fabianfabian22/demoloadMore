@@ -12,7 +12,7 @@ export class HouseService {
   getHouse(): Observable < any > {
     return this.http.get(this.Url)
       .pipe(
-        tap(w => console.log(w)),
+      //  tap(w => console.log(w)),
         catchError(this.handleError)
       );
   }

@@ -1,19 +1,15 @@
 import * as actionsHouse from "./house.actions";
-
 import { createReducer, on } from "@ngrx/store";
-import { House } from "src/app/share/models/house.model";
 
 export const initialState = {
   loading: false,
   list: [],
-  data: [],
   error: ''
 };
 
 export interface HouseState {
   loading: boolean;
   list: any[];
-  data: any[];
   error: string | undefined;
 }
 
@@ -39,14 +35,12 @@ export const HouseReducer = createReducer<HouseState>(
   }),
 
   on(actionsHouse.houseFetchMoreSuccessful, (state,{list}): HouseState => {
-    console.log(' ac: ', list);
-    let ver = state.list;
-    console.log('ver: ', ver);
-    return { ...state, list: list, loading: false };
+   let updateList = state.list.concat(list);
+   return { ...state, list: updateList , loading: false };
   }),
 
  on(actionsHouse.fetchError, (state, action): HouseState => {
     return { ...state, error: action.error, loading: false };
  }),
-//
+
 )

@@ -1,5 +1,9 @@
 
-<div class="flex flex-wrap  ">
-<button (click)=" loadMoreData() "></button>
-<app-items-house *ngFor="let item of houses$['data'] "></app-items-house>
+<div class="container  justify-center  items-center text-center">
+
+<div class="flex flex-wrap  mx-auto">
+<app-items-house *ngFor="let item of houses$"   [flat]="item"></app-items-house>
+</div>
+
+<button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded object-center" (click)=" loadMoreData() ">mostrar más</button>
 </div>
